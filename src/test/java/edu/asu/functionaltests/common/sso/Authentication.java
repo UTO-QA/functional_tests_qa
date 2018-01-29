@@ -1,6 +1,5 @@
-package edu.asu.functionaltests.definition;
+package edu.asu.functionaltests.common.sso;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -8,7 +7,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.hamcrest.MatcherAssert;
-import org.junit.rules.ErrorCollector;
 
 import static junit.framework.TestCase.fail;
 
@@ -50,7 +48,6 @@ public class Authentication {
         catch (Exception e)
         {
             System.out.println(response.code());
-            System.out.println("Resource result i am here so wrong");
             fail();
         }
     }
