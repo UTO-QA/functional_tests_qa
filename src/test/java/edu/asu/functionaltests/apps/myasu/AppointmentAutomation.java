@@ -82,6 +82,6 @@ public class AppointmentAutomation {
         long delay  = 1000L;
         long period = 1000L;
         //300000L
-        timer.scheduleAtFixedRate(repeatedTask, 0, 120000L);
+        timer.scheduleAtFixedRate(repeatedTask, 0, 300000L);
     }
 }
