@@ -36,33 +36,33 @@ public class AppointmentAutomation {
         WebElement element,element1,elem;
         BufferedWriter bw = null;
         FileWriter fw = null;
-       try {
-           element = driver.findElement(By.xpath("//a[text()='You are a potential ASU student interested in English or Film and Media Studies as a major.']"));
-           element.click();
-           element1 = driver.findElement(By.xpath("//a[text()='Continue to scheduling system']"));
-           element1.click();
-           Thread.sleep(1000);
-           elem = driver.findElement(By.xpath("//span[@id='Clientheader_subh_lblFirstName']"));
+        try {
+            element = driver.findElement(By.xpath("//a[text()='You are a potential ASU student interested in English or Film and Media Studies as a major.']"));
+            element.click();
+            element1 = driver.findElement(By.xpath("//a[text()='Continue to scheduling system']"));
+            element1.click();
+            Thread.sleep(1000);
+            elem = driver.findElement(By.xpath("//span[@id='Clientheader_subh_lblFirstName']"));
 
-           fw = new FileWriter(file.getAbsoluteFile(), true);
-           bw = new BufferedWriter(fw);
-           if(elem.getText().equals("temporary"))
-           {
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            bw = new BufferedWriter(fw);
+            if(elem.getText().equals("temporary"))
+            {
 
-               bw.write("Success\t"+ new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\r\n");
-           }
-           else
-           {
-               bw.write("Failure\t" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\r\n");
-           }
-       }
-       catch (Exception e)
-       {
-           fw = new FileWriter(file.getAbsoluteFile(), true);
-           bw = new BufferedWriter(fw);
-           bw.write("Failure\t" +  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\r\n");
-           e.printStackTrace();
-       }
+                bw.write("Success\t"+ new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\r\n");
+            }
+            else
+            {
+                bw.write("Failure\t" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\r\n");
+            }
+        }
+        catch (Exception e)
+        {
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            bw = new BufferedWriter(fw);
+            bw.write("Failure\t" +  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\r\n");
+            e.printStackTrace();
+        }
 
         bw.close();
         fw.close();

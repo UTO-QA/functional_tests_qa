@@ -20,7 +20,7 @@ public class WebDriverFactory {
 
 	}
 	public static WebDriver getDriverInstance(String type) {
-		
+
 		switch(type) {
 			case "HEADLESS":
 				DesiredCapabilities caps = new DesiredCapabilities();
@@ -38,7 +38,7 @@ public class WebDriverFactory {
 			default:
 		}
 		return DRIVER;
-		
+
 	}
 
 	public static WebDriver getConn(String url)
@@ -49,6 +49,6 @@ public class WebDriverFactory {
 		DRIVER.get(url);
 		return DRIVER;
 	}
-	
-	
+
+
 }
