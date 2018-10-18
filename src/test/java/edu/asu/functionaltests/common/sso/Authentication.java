@@ -15,6 +15,7 @@ import static junit.framework.TestCase.fail;
 
 public class Authentication {
 
+
     String url;
     OkHttpClient clientWithRedirect = new OkHttpClient.Builder().addNetworkInterceptor(new Interceptor() {
         @Override
