@@ -1,6 +1,6 @@
 
-Feature:
+Feature: Verifying ASU Web Standar Headers
   <Some interesting description here>
 
-  Scenario:
-    <Some interesting scenario steps here>
+  Scenario: White Background
+    Given User navigates to an 
