@@ -1,4 +1,4 @@
-Feature: Verifying ASU Web Standar Headers
+Feature: Verifying ASU Web Standard Headers
   
   Background: Going to asu
     Given Navigate to asu website
