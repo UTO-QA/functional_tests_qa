@@ -1,7 +1,7 @@
 Feature: Verifying ASU Web Standard Headers
   
   Background: All ASU websites must have a header
-    Given Navigate to asu.edu website
+    Given Navigate to a asu.edu website
     
   Scenario: White Background
     Then Verify the header has white backgrounnd
