@@ -7,7 +7,7 @@ Feature: Verifying ASU Web Standard Headers
     Then Verify the header has white backgrounnd
     
   Scenario: ASU Home in Global ASU links
-    Given User clicks on "ASU Home" link
+    Then User clicks on "ASU Home" link
     Then Drop-down appears with following options "News/Events, Academics, Research, Atletics, Alumni, Giving, President, About ASU"
     
   Scenario: My ASU in global links
