@@ -1,7 +1,7 @@
 Feature: Verifying ASU Web Standard Footers
   
   Background:All ASU websites must have a global footer
-    Given Navigate to a asu.edu website
+    Given Navigate to an asu.edu website
 
   Scenario: Footer Global Links
     Then Verify the following options are listed in the footer "Copyright and Trademark, Accessibility, Privacy, Terms of Use, Jobs, Emergency, Contact ASU"
