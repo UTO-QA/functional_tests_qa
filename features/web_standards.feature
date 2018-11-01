@@ -25,5 +25,17 @@ Feature: Verifying ASU Web Standard Headers
  Scenario: Directory in global links
    Then User clicks on "Directory" link
    Then User should be navigated to the Directory page
+ 
+ Scenario: ASU Global Search
+   Then I enter "keyword" to search
+   Then The user should see a list of results for the keyword
+   
+ Scenario: ASU Logo
+   Then I verify the asu logo is placed at Top 
+   
+ Scenario: ASU Logo redirection
+   Then I navigate to "https://admission.asu.edu/"
+   Then I click on ASU logo
+   Then I should be redirected to "https://www.asu.edu/"
    
     
