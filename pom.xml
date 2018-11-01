@@ -26,7 +26,7 @@
 								<!-- Mandatory -->
 								<!-- List of package names to scan for glue code. -->
 								<glue>
-									<package>edu.asu.classsearch.testcases.def</package>
+									<package>edu.asu.functionaltests.common.sso</package>
 								</glue>
 							</configuration>
 						</execution>
@@ -58,8 +58,8 @@
 						</goals>
 						<configuration>
 							<projectName>Class-Search Automation</projectName>
-							<outputDirectory>C:/Users/bsampat5/Dropbox (ASU)/automation/Reports/cucumber-html-reports</outputDirectory>
-							<cucumberOutput>C:/Users/bsampat5/Dropbox (ASU)/automation/Reports/cucumber.json</cucumberOutput>
+							<outputDirectory>C:/Users/bsampat5/Selenium_Reports/automation/Reports/cucumber-html-reports</outputDirectory>
+							<cucumberOutput>C:/Users/bsampat5/Selenium_Reports/cucumber.json</cucumberOutput>
 							<parallelTesting>false</parallelTesting>
 							<buildNumber>42</buildNumber>
 						</configuration>
