@@ -6,7 +6,7 @@ Feature: Financial Aid and Scholarships Functionality Feature
   
   Background: Navigate to My Finances Page in My ASU
     Given user navigates into "webapp4-qa.asu.edu/myasu/" website
-    And logs in using UserName as <username> and PassWord <password> 
+    And logs in using UserName as "username" and PassWord "password" 
     Then the login should be successful
 
     Scenario: Financial Aid and Scholarships Box Is Displayed
@@ -19,7 +19,7 @@ Feature: Financial Aid and Scholarships Functionality Feature
     
     Scenario:Financial Aid and Scholarships Box Header is Updated
         When user clicks on the "Finances" in the navbar
-        Then the "Financial Aid and Scholarships" box header should include an aid year drop-down
+        Then the "Financial Aid and Scholarships" box header should include an aid year drop-down menu
   
     Scenario: My Financial Aid Tracker Update
         When user clicks on the "Finances" in the navbar
