@@ -27,7 +27,7 @@ Feature: Financial Aid and Scholarships Functionality Feature
         
     Scenario: My Financial Aid Tracker Update
        When user clicks on the "Finances" in the navbar
-       Then the user should see a progress bar in the "Financia Aid and Scholarships" box
+       Then the user should see a progress bar in the "Financial Aid and Scholarships" box
 
     Scenario: My Financial Aid Tracker Upate
         When user clicks on the "Finances" in the navbar
