@@ -21,3 +21,15 @@ Feature: Financial Aid and Scholarships Functionality Feature
         When user clicks on the "Finances" in the navbar
         Then the "Financial Aid and Scholarships" box header should include an aid year drop-down
   
+    Scenario: My Financial Aid Tracker Update
+        When user clicks on the "Finances" in the navbar
+        Then the content inside the "Financial Aid and Schoarships" box should have a header that reads "Financial Aid Tracker"
+        
+    Scenario: My Financial Aid Tracker Update
+       When user clicks on the "Finances" in the navbar
+       Then the user should see a progress bar in the "Financia Aid and Scholarships" box
+
+    Scenario: My Financial Aid Tracker Upate
+        When user clicks on the "Finances" in the navbar
+        Then 
+       
