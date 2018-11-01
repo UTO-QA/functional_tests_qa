@@ -9,15 +9,15 @@ Feature: Financial Aid and Scholarships Functionality Feature
     And logs in using UserName as <username> and PassWord <password> 
     Then the login should be successful
 
-  Scenario: Financial Aid and Scholarships Box Is Displayed
-    When user clicks on the "Finances" in the navbar
-    Then the "Financial Aid and Scholarships" section is displayed
+    Scenario: Financial Aid and Scholarships Box Is Displayed
+        When user clicks on the "Finances" in the navbar
+        Then the "Financial Aid and Scholarships" section is displayed
     
     Scenario: Financial Aid and Scholarships Box Header is Updated
-      When user clicks on the "Finances" in the navbar
-      Then the "Financial Aid and Scholarships" box header should include "Financial Aid and Scholarships" and "Aid Year"
+        When user clicks on the "Finances" in the navbar
+        Then the "Financial Aid and Scholarships" box header should include "Financial Aid and Scholarships" and "Aid Year"
     
-Scenario:Financial Aid and Scholarships Box Header is Updated
-  When user clicks on the "Finances" in the navbar
-  Then the "Financial Aid and Scholarships" box header should include an aid year drop-down
+    Scenario:Financial Aid and Scholarships Box Header is Updated
+        When user clicks on the "Finances" in the navbar
+        Then the "Financial Aid and Scholarships" box header should include an aid year drop-down
   
