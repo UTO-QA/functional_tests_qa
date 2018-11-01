@@ -11,7 +11,7 @@ Feature: Verifying ASU Web Standard Headers
     Then Drop-down appears with following options "News/Events, Academics, Research, Atletics, Alumni, Giving, President, About ASU"
     
   Scenario: My ASU in global links
-    Then Click on MyASu link
+    Then Click on "MyASu" link
     Then User should be navigated to MyASU login page
     
   Scenario: Colleges and Schools in global links
