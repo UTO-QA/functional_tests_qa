@@ -2,7 +2,7 @@
 Feature: Financial Aid and Scholarships Functionality Feature
   
   In order to ensure the Financial Aid and Scholarships section has been updated,
-  I want to run the cucumber tests to verify it is working
+  I want to run the cucumber tests to verify the changes
   
   Background: Navigate to My Finances Page in My ASU
     Given user navigates into "webapp4-qa.asu.edu/myasu/" website
