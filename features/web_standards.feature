@@ -47,7 +47,7 @@ Scenario Outline: ASU explore degree buttons
   Then I navigate to "<url>"
   Then I verify the "Undergraduate" button
   Examples:
-    |            url                        | 
+    |            url                      | 
     | https://wpcarey.asu.edu/            |
     | https://herbergerinstitute.asu.edu/ |
    
