@@ -21,3 +21,4 @@ Scenario: Explore degree buttons
   Then I verify the "Undergraduate" button
   Then I verify the "Undergraduate" button
   Then I verify that the buttons belong to the Explore pannel
+  
