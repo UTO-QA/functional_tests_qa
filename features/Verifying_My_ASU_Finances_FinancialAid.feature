@@ -1,20 +1,17 @@
 
-Feature: Students should be able to view their financial information in MyASU to keep track
-  of their student accounts
+Feature: Students should be able to view their financial aid information in MyASU
   
   Background: 
-    Given the user has access to MyASU
+    Given the student user has access to MyASU
     When the user logs in
     And clicks on Finances in the navigation bar
     Then the finances page should display
 
-    Scenario: Financial Aid and Scholarships Box Is Displayed
-        When user clicks on the "Finances" in the navbar
-        Then the "Financial Aid and Scholarships" section is displayed
+    Scenario: Financial Aid and Scholarships Box is displayed on the Finances page
+        Then the user should see "Financial Aid and Scholarships" section
     
     Scenario: Financial Aid and Scholarships Box Header is Updated
-        When user clicks on the "Finances" in the navbar
-        Then the "Financial Aid and Scholarships" box header should include "Financial Aid and Scholarships" and "Aid Year"
+        Then the user shoud see "Financial Aid and Scholarships" and "Aid Year" in the "Financial Aid and Scholarships" box header 
     
     Scenario:Financial Aid and Scholarships Box Header is Updated
         When user clicks on the "Finances" in the navbar
