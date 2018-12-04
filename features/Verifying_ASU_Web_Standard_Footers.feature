@@ -1,4 +1,4 @@
-Feature: Verifying ASU Web Standard Footers
+Feature: Global Footer should be at the bottom of each web page and may not be altered
   
   Background:All ASU websites must have a global footer
     Given Navigate to an asu.edu website
