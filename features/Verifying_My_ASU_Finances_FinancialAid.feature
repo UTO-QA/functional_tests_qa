@@ -18,13 +18,15 @@ Feature: Students should be able to view their financial aid information in MyAS
       
     Scenario: View Steps of Financial Aid Tracker
       Given the user is logged in
-      And onte
-        When user clicks on the "Finances" in the navbar
-        Then the "Financial Aid and Scholarships" box header should include an aid year drop-down menu
+      And on the finances page
+      When the user clicks on the View Steps drawer in the Financial Aid Tracker section
+      Then the six financial aid steps are displayed 
   
-    Scenario: My Financial Aid Tracker Update
-        When user clicks on the "Finances" in the navbar
-        Then the content inside the "Financial Aid and Schoarships" box should have a header that reads "Financial Aid Tracker"
+    Scenario: Click the Submit FAFSA Button
+        Given the user is logged
+        And on the finances page
+        When the user clicks the Submit FAFSA button in the Financial Aid section
+        Then the page is directed to https://students.asu.edu/financialaid/apply 
         
     Scenario: My Financial Aid Tracker Update
        When user clicks on the "Finances" in the navbar
