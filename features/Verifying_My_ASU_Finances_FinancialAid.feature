@@ -28,6 +28,7 @@ Feature: Students should be able to view their financial aid information in MyAS
         When the user clicks the Submit FAFSA button in the Financial Aid section
         Then the page is directed to https://students.asu.edu/financialaid/apply 
         
+    #not applicable to all students?
     Scenario: View SAP Status
         Given the user is logged in
         And on the finances page
