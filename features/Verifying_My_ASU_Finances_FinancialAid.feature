@@ -1,13 +1,12 @@
 
-Feature: Financial Aid and Scholarships Functionality Feature
+Feature: Students should be able to view their financial information in MyASU to keep track
+  of their student accounts
   
-  In order to ensure the Financial Aid and Scholarships section has been updated,
-  I want to run the cucumber tests to verify the changes
-  
-  Background: Navigate to My Finances Page in My ASU
-    Given user navigates into "webapp4-qa.asu.edu/myasu/" website
-    And logs in using UserName as "username" and PassWord "password" 
-    Then the login should be successful
+  Background: 
+    Given the user has access to MyASU
+    When the user logs in
+    And clicks on Finances in the navigation bar
+    Then the finances page should display
 
     Scenario: Financial Aid and Scholarships Box Is Displayed
         When user clicks on the "Finances" in the navbar
