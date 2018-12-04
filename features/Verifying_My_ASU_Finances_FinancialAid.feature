@@ -2,16 +2,22 @@
 Feature: Students should be able to view their financial aid information in MyASU
   
   Background: 
-    Given the student user has access to MyASU
-    When the user logs in
-    And clicks on Finances in the navigation bar
-    Then the finances page should display
+    Given the user is a student
+    And has access to MyASU
 
-    Scenario: Financial Aid and Scholarships Box is displayed on the Finances page
-        Then the user should see "Financial Aid and Scholarships" section
+    Scenario: View Finances page in MyASU
+      Given the user is logged in
+      When the user clicks on Finances in the navigation bar
+      Then the finances page should display
     
-    Scenario: Financial Aid and Scholarships Box Header is Updated
-        Then the user shoud see "Financial Aid and Scholarships" and "Aid Year" in the "Financial Aid and Scholarships" box header 
+    Scenario: User should be able to select a Financial Aid award year to view
+      Given the user is on the finances page
+      When the user clicks the Aid Year drawer in the header box of the Financial Aid section
+      Then a drop-down menu should appear listing the active financial aid award years  
+      
+
+    
+    
     
     Scenario:Financial Aid and Scholarships Box Header is Updated
         When user clicks on the "Finances" in the navbar
