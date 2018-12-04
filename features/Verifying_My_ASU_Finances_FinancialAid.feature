@@ -1,4 +1,3 @@
-
 Feature: Students should be able to view their financial aid information in MyASU
   
   Background: 
