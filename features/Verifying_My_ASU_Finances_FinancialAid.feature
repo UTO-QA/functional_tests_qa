@@ -16,11 +16,9 @@ Feature: Students should be able to view their financial aid information in MyAS
       When the user clicks the Aid Year drawer in the header box of the Financial Aid section
       Then a drop-down menu should appear listing the active financial aid award years  
       
-
-    
-    
-    
-    Scenario:Financial Aid and Scholarships Box Header is Updated
+    Scenario: View Steps of Financial Aid Tracker
+      Given the user is logged in
+      And onte
         When user clicks on the "Finances" in the navbar
         Then the "Financial Aid and Scholarships" box header should include an aid year drop-down menu
   
