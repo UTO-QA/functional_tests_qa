@@ -11,7 +11,8 @@ Feature: Students should be able to view their financial aid information in MyAS
       Then the finances page should display
     
     Scenario: User should be able to select a Financial Aid award year to view
-      Given the user is on the finances page
+      Given the user is logged in
+      And on the finances page
       When the user clicks the Aid Year drawer in the header box of the Financial Aid section
       Then a drop-down menu should appear listing the active financial aid award years  
       
