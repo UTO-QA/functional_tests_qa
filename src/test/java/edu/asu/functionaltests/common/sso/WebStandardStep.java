@@ -27,10 +27,6 @@ public class WebStandardStep extends PageInjector {
         initFluent(driver);
         initTest();
 
-
-//        driver = new FirefoxDriver();
-//        initFluent(driver);
-//        initTest();
     }
 
     @Given("^I navigate to \"([^\"]*)\"$")
@@ -41,8 +37,6 @@ public class WebStandardStep extends PageInjector {
 
     @Then("^I verify the \"([^\"]*)\" logo$")
     public void iVerifyTheLogo(String logo) throws Throwable {
-
-
         webStandardAction.validateLogo();
 
     }
@@ -62,12 +56,35 @@ public class WebStandardStep extends PageInjector {
         throw new PendingException();
     }
 
+
+    @Then("^Verify the header has white backgrounnd$")
+    public void verifyTheHeaderHasWhiteBackgrounnd() throws Throwable {
+       webStandardAction.verifyHeaderBackground();
+    }
+
+
     @After
     public void TearDown(){
         driver.close();
         driver.quit();
     }
 
+    @Then("^User clicks on \"([^\"]*)\" link$")
+    public void userClicksOnLink(String linkName) throws Throwable {
+        Assert.assertTrue(webStandardAction.clickOnLinks(linkName));
+    }
 
+    @Then("^Drop-down appears for \"([^\"]*)\" with following options \"([^\"]*)\"$")
+    public void dropDownAppearsForWithFollowingOptions(String menu, String subMenuOptions) throws Throwable {
+        String[] subMenuList = subMenuOptions.split(",");
+        webStandardAction.verifySubMenu(menu,subMenuList);
+
+    }
+
+    @Then("^User should be navigated to MyASU login page$")
+    public void userShouldBeNavigatedToMyASULoginPage() throws Throwable {
+
+        webStandardAction.navigateToMyAsu();
+    }
 }
 
