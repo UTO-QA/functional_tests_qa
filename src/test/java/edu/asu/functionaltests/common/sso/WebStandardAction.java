@@ -47,8 +47,14 @@ public class WebStandardAction extends WebStandardLocator {
     }
 
     public void navigateToMyAsu(){
-        getDriver().getCurrentUrl().contains("https://weblogin.asu.edu/cas/login");
+        Assert.assertTrue(getDriver().getCurrentUrl().contains("https://weblogin.asu.edu/cas/login"));
         Assert.assertTrue(loginContainer.isDisplayed());
     }
+
+    public void verifyNavigationToSchoolsAndCollege(){
+        Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.asu.edu/about/colleges-and-schools");
+
+    }
+
 }
 

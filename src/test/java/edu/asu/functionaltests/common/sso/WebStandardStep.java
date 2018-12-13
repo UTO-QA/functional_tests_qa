@@ -86,5 +86,10 @@ public class WebStandardStep extends PageInjector {
 
         webStandardAction.navigateToMyAsu();
     }
+
+    @Then("^User should be navigate to Colleges and Schools home page$")
+    public void userShouldBeNavigateToCollegesAndSchoolsHomePage() throws Throwable {
+        webStandardAction.verifyNavigationToSchoolsAndCollege();
+    }
 }
 
