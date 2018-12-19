@@ -15,11 +15,11 @@ Feature: Verifying ASU Web Standard Headers
     Then User should be navigated to MyASU login page
     
   Scenario: Colleges and Schools in global links
-    Then User clicks on "Colleges & Schools" link
+    Then User clicks on "Colleges and Schools" link
     Then User should be navigate to Colleges and Schools home page
  
  Scenario: Maps and Locations in global links
-   Then User clicks on "Maps & Location" link
+   Then User clicks on "Maps and Location" link
    Then User should be navigated to the Maps page
    
  Scenario: Directory in global links
@@ -27,8 +27,8 @@ Feature: Verifying ASU Web Standard Headers
    Then User should be navigated to the Directory page
  
  Scenario: ASU Global Search
-   Then I enter "keyword" to search
-   Then The user should see a list of results for the keyword
+   Then I enter "courses" to search
+   Then The user should see a list of results for the keyword "courses"
    
  Scenario: ASU Logo
    Then I verify the asu logo is placed at Top 

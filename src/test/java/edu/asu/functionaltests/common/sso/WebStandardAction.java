@@ -2,6 +2,8 @@ package edu.asu.functionaltests.common.sso;
 
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+
 import java.util.List;
 
 public class WebStandardAction extends WebStandardLocator {
@@ -47,13 +49,46 @@ public class WebStandardAction extends WebStandardLocator {
     }
 
     public void navigateToMyAsu(){
-        Assert.assertTrue(getDriver().getCurrentUrl().contains("https://weblogin.asu.edu/cas/login"));
+        Assert.assertTrue("User was not redirected to myasu login",getDriver().getCurrentUrl().contains("https://weblogin.asu.edu/cas/login"));
         Assert.assertTrue(loginContainer.isDisplayed());
     }
 
     public void verifyNavigationToSchoolsAndCollege(){
-        Assert.assertEquals(getDriver().getCurrentUrl(),"https://www.asu.edu/about/colleges-and-schools");
+        Assert.assertEquals("User was not redirected to Schools and College page","https://www.asu.edu/about/colleges-and-schools",getDriver().getCurrentUrl());
+    }
 
+    public void verifyNavigationToMaps(){
+        Assert.assertEquals("User was not redirected to maps page","https://www.asu.edu/map/interactive/",getDriver().getCurrentUrl());
+    }
+
+    public void verifyNavigationToDirectory(){
+        Assert.assertEquals("User was not redirected to directory page","https://isearch.asu.edu/asu-people/", getDriver().getCurrentUrl());
+    }
+
+    public void verifyASULogoPosition(){
+        Assert.assertEquals("Asu logo is not positioned at top","_top",asuLogo.getAttribute("target"));
+        Assert.assertEquals("Asu logo url is incorrect","https://www.asu.edu/", asuLogo.getAttribute("href"));
+        Assert.assertTrue("Asu logo font is not correct",asuLogo.getElement().getCssValue("font-family").contains("sans-serif"));
+    }
+
+    public void enterKeywordforSearch(String keyword){
+        click(globalSearchBox);
+        globalSearchBox.fill().with(keyword);
+        globalSearchBox.getElement().sendKeys(Keys.ENTER);
+        Assert.assertTrue(searchResults.getText().contains(keyword));
+    }
+
+    public void verifySearchResults(String keyword){
+        Assert.assertTrue(searchResultBar.isDisplayed());
+        Assert.assertTrue(searchResults.getText().contains(keyword));
+    }
+
+    public void clickASULogo(){
+        click(asuLogo);
+    }
+
+    public void verifyRedirectionToAsuHomePage(){
+        Assert.assertEquals("User was not redirected after clicking on logo icon","https://www.asu.edu/",getDriver().getCurrentUrl());
     }
 
 }

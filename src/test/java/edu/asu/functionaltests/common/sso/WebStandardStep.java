@@ -91,5 +91,41 @@ public class WebStandardStep extends PageInjector {
     public void userShouldBeNavigateToCollegesAndSchoolsHomePage() throws Throwable {
         webStandardAction.verifyNavigationToSchoolsAndCollege();
     }
+
+    @Then("^User should be navigated to the Maps page$")
+    public void userShouldBeNavigatedToTheMapsPage() throws Throwable {
+        webStandardAction.verifyNavigationToMaps();
+
+    }
+
+    @Then("^User should be navigated to the Directory page$")
+    public void userShouldBeNavigatedToTheDirectoryPage() throws Throwable {
+          webStandardAction.verifyNavigationToDirectory();
+    }
+
+    @Then("^I verify the asu logo is placed at Top$")
+    public void iVerifyTheAsuLogoIsPlacedAtTop() throws Throwable {
+        webStandardAction.verifyASULogoPosition();
+    }
+
+    @Then("^I enter \"([^\"]*)\" to search$")
+    public void iEnterToSearch(String keyword) throws Throwable {
+        webStandardAction.enterKeywordforSearch(keyword);
+    }
+
+    @Then("^The user should see a list of results for the keyword \"([^\"]*)\"$")
+    public void userShouldSeeListOfResults(String keyword) throws Throwable {
+        webStandardAction.verifySearchResults(keyword);
+    }
+
+    @Then("^I click on ASU logo$")
+    public void iClickOnASULogo() throws Throwable {
+        webStandardAction.clickASULogo();
+    }
+
+    @Then("^I should be redirected to \"([^\"]*)\"$")
+    public void iShouldBeRedirectedTo(String arg0) throws Throwable {
+        webStandardAction.verifyRedirectionToAsuHomePage();
+    }
 }
 
