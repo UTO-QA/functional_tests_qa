@@ -1,7 +1,7 @@
 Feature: Global Footer should be at the bottom of each web page and may not be altered
   
-  Background:All ASU websites must have a global footer
-    Given Navigate to an asu.edu website
+  ScenarioOutline: All ASU websites must have a global footer
+    Given User navigates to an "<url>" website
 
   Scenario: Footer Global Links
     Then Verify the following options are listed in the footer "Copyright and Trademark, Accessibility, Privacy, Terms of Use, Jobs, Emergency, Contact ASU"
