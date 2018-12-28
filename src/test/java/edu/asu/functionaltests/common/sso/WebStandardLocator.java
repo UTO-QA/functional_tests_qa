@@ -15,6 +15,9 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css="#asu_logo a img")
     public FluentWebElement logo;
 
+    @FindBy(css="#asu_logo a")
+    public FluentWebElement asuLogo;
+
     @FindBy(css = ".asu_hdr_white")
     public FluentWebElement whiteHeader;
 
@@ -25,11 +28,23 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css="#login_container")
     public FluentWebElement loginContainer;
 
+    @FindBy(css = "#asu_search_module .asu_search_box")
+    public FluentWebElement globalSearchBox;
 
+    @FindBy(css=".results-table td")
+    public FluentWebElement searchResults;
 
+    @FindBy(css=".search-header")
+    public FluentWebElement searchResultBar;
 
+    @FindBy(css=".fa.fa-home")
+    public FluentWebElement homeIcon;
 
+    @FindBy(css=".btn.btn-gold")
+    public FluentWebElement goldButton;
 
+    @FindBy(css=".btn-programs")
+    public FluentWebElement blueButton;
 
 
 }
