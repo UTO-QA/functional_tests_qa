@@ -37,12 +37,14 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css=".search-header")
     public FluentWebElement searchResultBar;
 
+    @FindBy(css=".fa.fa-home")
+    public FluentWebElement homeIcon;
 
+    @FindBy(css=".btn.btn-gold")
+    public FluentWebElement goldButton;
 
-
-
-
-
+    @FindBy(css=".btn-programs")
+    public FluentWebElement blueButton;
 
 
 }

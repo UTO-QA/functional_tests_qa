@@ -69,6 +69,8 @@ public class WebStandardAction extends WebStandardLocator {
         Assert.assertEquals("Asu logo is not positioned at top","_top",asuLogo.getAttribute("target"));
         Assert.assertEquals("Asu logo url is incorrect","https://www.asu.edu/", asuLogo.getAttribute("href"));
         Assert.assertTrue("Asu logo font is not correct",asuLogo.getElement().getCssValue("font-family").contains("sans-serif"));
+        Assert.assertTrue("Asu logo font is not correct",asuLogo.getElement().getCssValue("height").contains("36px"));
+        Assert.assertTrue("Asu logo font is not correct",asuLogo.getElement().getCssValue("width").contains("200px"));
     }
 
     public void enterKeywordforSearch(String keyword){
@@ -89,6 +91,25 @@ public class WebStandardAction extends WebStandardLocator {
 
     public void verifyRedirectionToAsuHomePage(){
         Assert.assertEquals("User was not redirected after clicking on logo icon","https://www.asu.edu/",getDriver().getCurrentUrl());
+    }
+
+    public void verifyHomeIconStandards(){
+        Assert.assertEquals("Font-family of home icon is not correct", "FontAwesome",homeIcon.getElement().getCssValue("font-family"));
+        Assert.assertEquals("Font size of home icon is not correct","16px",homeIcon.getElement().getCssValue("font-size"));
+
+    }
+
+    public void validateButtons(String button){
+        if(button.equals("Apply") || button.equals("Request info")){
+            Assert.assertTrue(goldButton.isDisplayed());
+            Assert.assertTrue(goldButton.getElement().getCssValue("background-color").contains("255, 196, 37"));
+        }
+        else if(button.equals("Undergraduate")){
+            Assert.assertTrue(blueButton.isDisplayed());
+            Assert.assertTrue(blueButton.getElement().getCssValue("background-color").contains("0, 142, 214"));
+        }
+
+
     }
 
 }

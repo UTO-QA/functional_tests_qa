@@ -9,16 +9,20 @@ Feature: Validate various button types
   
 Scenario Outline: ASU explore degree buttons
   When I navigate to "<url>"
-  Then I verify the "Undergraduate" button
+  Then I validate the "Undergraduate" button
   Examples:
-    |            url                      | 
-    | https://wpcarey.asu.edu/            |
-    | https://herbergerinstitute.asu.edu/ |
-    | https://clas.asu.edu/               |
+    |            url                                     |
+    | https://wpcarey.asu.edu/                           |
 
-Scenario: Explore degree buttons
+
+Scenario Outline: Explore degree buttons
   When I navigate to "<url>"
-  Then I verify the "Undergraduate" button
-  Then I verify the "Undergraduate" button
+  Then I validate the "Undergraduate programs" button
+  Then I validate the "Graduate programs" button
   Then I verify that the buttons belong to the Explore pannel
+  Examples:
+  |                   url                              |
+  | https://herbergerinstitute.asu.edu/degree-programs |
+  | https://clas.asu.edu/                              |
+
   
