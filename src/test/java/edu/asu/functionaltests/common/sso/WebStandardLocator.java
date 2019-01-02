@@ -26,6 +26,31 @@ public class WebStandardLocator extends FluentPage {
     public FluentWebElement loginContainer;
 
 
+// Global Footer
+    @FindBy(css="#innovation-footer")
+    public FluentWebElement globalFooter;
+
+    @FindBy(id ="#innovation-bar")
+    public FluentWebElement innovationBar;
+
+    @FindBy(className =".innovation-top")
+    public FluentWebElement innovationTop;
+
+    @FindBy(className =".innovation-status a span")
+    public FluentWebElement innovationStatus;
+
+    @FindBy(className =".innovation-hidden a img")
+    public FluentWebElement bestCollegesIcon;
+
+    @FindBy (css = "#innovation-footer .footer-menu")
+    public FluentWebElement footerMenu;
+
+
+    public List<FluentWebElement> footerMenuList() {
+
+        return find("#innovation-footer .footer-menu ul li a");
+    }
+
 
 
 

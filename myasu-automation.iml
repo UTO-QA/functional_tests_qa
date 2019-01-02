@@ -72,5 +72,9 @@
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.okhttp3:okhttp:3.9.1" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.13.0" level="project" />
+    <orderEntry type="library" name="Maven: org.fluentlenium:fluentlenium-core:0.10.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.fluentlenium:fluentlenium-assertj:0.10.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.fluentlenium:fluentlenium-cucumber:0.10.3" level="project" />
   </component>
 </module>
