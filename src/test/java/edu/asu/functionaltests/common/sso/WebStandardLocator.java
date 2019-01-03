@@ -15,6 +15,9 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css="#asu_logo a img")
     public FluentWebElement logo;
 
+    @FindBy(css="#asu_logo a")
+    public FluentWebElement asuLogo;
+
     @FindBy(css = ".asu_hdr_white")
     public FluentWebElement whiteHeader;
 
@@ -25,36 +28,23 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css="#login_container")
     public FluentWebElement loginContainer;
 
+    @FindBy(css = "#asu_search_module .asu_search_box")
+    public FluentWebElement globalSearchBox;
 
-// Global Footer
-    @FindBy(css="#innovation-footer")
-    public FluentWebElement globalFooter;
+    @FindBy(css=".results-table td")
+    public FluentWebElement searchResults;
 
-    @FindBy(id ="#innovation-bar")
-    public FluentWebElement innovationBar;
+    @FindBy(css=".search-header")
+    public FluentWebElement searchResultBar;
 
-    @FindBy(className =".innovation-top")
-    public FluentWebElement innovationTop;
+    @FindBy(css=".fa.fa-home")
+    public FluentWebElement homeIcon;
 
-    @FindBy(className =".innovation-status a span")
-    public FluentWebElement innovationStatus;
+    @FindBy(css=".btn.btn-gold")
+    public FluentWebElement goldButton;
 
-    @FindBy(className =".innovation-hidden a img")
-    public FluentWebElement bestCollegesIcon;
-
-    @FindBy (css = "#innovation-footer .footer-menu")
-    public FluentWebElement footerMenu;
-
-
-    public List<FluentWebElement> footerMenuList() {
-
-        return find("#innovation-footer .footer-menu ul li a");
-    }
-
-
-
-
-
+    @FindBy(css=".btn-programs")
+    public FluentWebElement blueButton;
 
 
 }
