@@ -46,6 +46,15 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css=".btn-programs")
     public FluentWebElement blueButton;
 
+    public List<FluentWebElement> imagesOnAsuEdu(){
+        return find(".field-item span img");
+    }
+
+    public List<FluentWebElement> tabsOnAsuEdu(){
+        return find(".block-tb-megamenu .tb-megamenu-main-menu .tb-megamenu-nav>li a");
+    }
+
+
 
 }
 

@@ -133,5 +133,15 @@ public class WebStandardStep extends PageInjector {
     public void iValidateTheButton(String button) throws Throwable {
          webStandardAction.validateButtons(button);
     }
+
+    @Then("^I verify the first photo on the page$")
+    public void iVerifyTheFirstPhotoOnThePage() throws Throwable {
+      //  webStandardAction.validatePhotoStandards();
+    }
+
+    @Then("^I go to the \"([^\"]*)\" tab verify the first photo on the page$")
+    public void iGoToTheTabVerifyTheFirstPhotoOnThePage(String tab) throws Throwable {
+           webStandardAction.validatePhotoStandards(tab);
+    }
 }
 
