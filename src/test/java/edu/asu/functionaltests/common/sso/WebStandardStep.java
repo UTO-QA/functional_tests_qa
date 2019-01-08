@@ -1,11 +1,14 @@
 package edu.asu.functionaltests.common.sso;
 import cucumber.api.PendingException;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,7 +23,7 @@ public class WebStandardStep extends PageInjector {
     @Before
     public void setUp(){
         System.out.println("Before tag");
-        System.setProperty("webdriver.chrome.driver", "C:/Users/jrai4/Desktop/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/ehender2/chromedriver.exe");
         driver = new ChromeDriver();
         initFluent(driver);
         initTest();
@@ -54,15 +57,15 @@ public class WebStandardStep extends PageInjector {
     }
 
 
-    @Then("^Verify the header has white backgrounnd$")
-    public void verifyTheHeaderHasWhiteBackgrounnd() throws Throwable {
+    @Then("^Verify the header has white background$")
+    public void verifyTheHeaderHasWhiteBackground() throws Throwable {
        webStandardAction.verifyHeaderBackground();
     }
 
     @After
     public void TearDown(){
+        //driver.quit();
         driver.close();
-        driver.quit();
     }
 
     @Then("^User clicks on \"([^\"]*)\" link$")

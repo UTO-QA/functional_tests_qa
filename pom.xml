@@ -67,6 +67,30 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>com.trivago.rta</groupId>
+				<artifactId>cluecumber-report-plugin</artifactId>
+				<version>1.6.2</version>
+				<executions>
+					<execution>
+						<id>report</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>reporting</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceJsonReportDirectory>{C:\Users\ehender2\IdeaProjects\Reports/cucumber-report}</sourceJsonReportDirectory>
+					<generatedHtmlReportDirectory>{C:\Users\ehender2\IdeaProjects\Reports/generated-report}</generatedHtmlReportDirectory>
+					<customParameters>
+						<Custom_Parameter> Web Standards Test </Custom_Parameter>
+						<Custom_URL>https://brandguide.asu.edu/web-standards</Custom_URL>
+					</customParameters>
+				</configuration>
+			</plugin>
+
+
 		</plugins>
 	</build>
 	<dependencies>

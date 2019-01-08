@@ -4,10 +4,10 @@ Feature: Verifying ASU Web Standard Headers
     Given I navigate to "https://www.asu.edu/"
     
   Scenario: White Background
-    Then Verify the header has white backgrounnd
+    Then Verify the header has white background
     
   Scenario: ASU Home in Global ASU links
-    Then User clicks on "ASU Home" link
+    When User clicks on "ASU Home" link
     Then Drop-down appears for "ASU Home" with following options "News and Events, Academics, Research, Atletics, Alumni, Giving, President, About ASU"
     
   Scenario: My ASU in global links

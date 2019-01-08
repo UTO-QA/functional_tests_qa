@@ -35,6 +35,9 @@ public class WebDriverFactory {
 			case "FIREFOX":
 				DRIVER  = new FirefoxDriver();
 				break;
+
+			case "CHROME":
+				DRIVER = new ChromeDriver();
 			default:
 		}
 		return DRIVER;
