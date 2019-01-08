@@ -1,5 +1,6 @@
 package edu.asu.functionaltests.common.sso;
 
+import cucumber.api.java.cs.A;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -96,7 +97,8 @@ public class WebStandardAction extends WebStandardLocator {
     public void verifyHomeIconStandards(){
         Assert.assertEquals("Font-family of home icon is not correct", "FontAwesome",homeIcon.getElement().getCssValue("font-family"));
         Assert.assertEquals("Font size of home icon is not correct","16px",homeIcon.getElement().getCssValue("font-size"));
-
+        Assert.assertTrue("Home Icon color is not correct",homeIcon.getElement().getCssValue("color").contains("237, 237, 237"));
+        Assert.assertEquals("Font-style of home icon is not correct", "normal",homeIcon.getElement().getCssValue("font-style"));
     }
 
     public void validateButtons(String button){
@@ -108,7 +110,17 @@ public class WebStandardAction extends WebStandardLocator {
             Assert.assertTrue(blueButton.isDisplayed());
             Assert.assertTrue(blueButton.getElement().getCssValue("background-color").contains("0, 142, 214"));
         }
+    }
 
+    public void validatePhotoStandards(String tab){
+        for(int i =0;i<=tabsOnAsuEdu().size();i++){
+            if(tabsOnAsuEdu().get(i).getText().trim().equals(tab)){
+                tabsOnAsuEdu().get(i).click();
+                String source = imagesOnAsuEdu().get(i).getAttribute("src");
+                Assert.assertEquals("Image width is not correct",imagesOnAsuEdu().get(i).getAttribute("width"),"1920");
+                Assert.assertEquals("Image height is not correct",imagesOnAsuEdu().get(i).getAttribute("height"),"1080");
+            }
+        }
 
     }
 
